@@ -1,8 +1,11 @@
 import { Flex, Heading, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import { useSelector } from "react-redux";
 import CustomBtn from "./CustomBtn";
 
 const HomeLeftSection = () => {
+  const data = useSelector((store) => store)
+
   return (
     <Stack w="50%" pr="2.5rem" justify="space-between">
       <Heading lineHeight="tall" color="white" size="3xl">

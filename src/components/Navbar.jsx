@@ -1,5 +1,7 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import { useSelector } from "react-redux";
+import AdminLogin from "./AdminLogin";
 import CustomBtn from "./CustomBtn";
 import NavLinks from "./NavLinks";
 
@@ -13,6 +15,9 @@ const arr = [
 ];
 
 const Navbar = () => {
+  const data = useSelector((store) => store)
+
+
   return (
     <Flex
       w="100%"
@@ -41,8 +46,10 @@ const Navbar = () => {
           <NavLinks text={el} key={index} />
         ))}
       </Flex>
-
-      <CustomBtn text="Registration" />
+      <Flex gap="1rem" align="center">
+        <AdminLogin />
+        <CustomBtn text="Registration" />
+      </Flex>
     </Flex>
   );
 };

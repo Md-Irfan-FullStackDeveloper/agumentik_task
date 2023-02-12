@@ -1,7 +1,10 @@
 import { Box, Flex, Image, Stack } from "@chakra-ui/react";
 import React from "react";
+import { useSelector } from "react-redux";
 
 const HomeRightSection = () => {
+  const data = useSelector((store) => store)
+
   return (
     <Stack w="50%" m="auto" align="center">
       <Box>
